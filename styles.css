@@ -1,0 +1,75 @@
+body {
+    font-family: 'Poppins', sans-serif;
+		margin: 2% 8%;
+}
+/* -------- HEADER -------- */
+h1 {
+	font-family: 'PT Serif', serif;
+	font-size: 36px;
+	font-weight: 700;
+}
+h2 {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 27px;
+	width: 150px;
+	height: 27px;
+	text-transform: uppercase;
+}
+.grid-container-1 {
+    display: grid;
+    grid-template-columns: 50% auto;
+}
+.grid-item{
+	margin-top: 10%;
+	margin-left: 13%;
+}
+.description {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 27px;
+	width: 439px;
+	height: 87px;
+}
+/* -------- MAIN BODY -------- */
+.grid-container-2 {
+	margin-top: 5%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+	margin-left: 6.5%;
+}
+
+.grid-item-2 {
+	width: 70%;
+  height: 95%;
+	position: relative;
+}
+
+.card-component-2 {
+	margin-top: 40%;
+	position: relative;
+}
+
+.card-component-5 {
+	margin-top: 40%;
+	position: relative;
+}
+.headshot {
+	height: 350px;
+	width: 250px;
+}
+
+.role {
+	font-family: 'PT Serif', serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	text-align: left;
+	text-transform: uppercase;
+	position: absolute;
+	top: 40px;
+	right: -30px;
+  transform: rotate(90deg);
+}
+/* -------- FOOTER -------- */
