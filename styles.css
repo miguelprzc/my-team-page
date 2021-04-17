@@ -1,18 +1,47 @@
 body {
     font-family: 'Poppins', sans-serif;
-		margin: 2% 8% 2% 8%;
+		margin: 2% 10% 2% 10%;
 }
 * {
 	box-sizing: border-box;
 }
 /* -------- HEADER -------- */
+
+.grid-container {
+    display: grid;
+		/* height: 100vh; */
+    grid-template-columns: repeat(3, 380px);
+		grid-template-rows: .75fr 2fr 2fr;
+		grid-template-areas:
+			"grid-item-1-1 grid-item-1-2 grid-item-1-2"
+			"card-component-1 card-component-2 card-component-3"
+			"card-component-4 card-component-5 card-component-6";
+		justify-content: center;
+		text-align: center;
+}
+
+.grid-item-1-1{
+	grid-area: grid-item-1-1;
+	justify-content: center;
+	margin-left: 10%;
+	margin-top: 15%;
+}
+.grid-item-1-2{
+	grid-area: grid-item-1-2;
+	justify-content: center;
+	margin-left: 10%;
+	margin-top: 7.5%;
+}
+
 h1 {
 	font-family: 'PT Serif', serif;
 	font-size: 36px;
 	font-weight: 700;
 	width: 350px;
 	height: 120px;
-	margin-right:0 %;
+	margin-top: 0;
+	margin-left: 10%;
+	text-align: left;
 }
 h2 {
 	font-size: 18px;
@@ -21,15 +50,8 @@ h2 {
 	width: 150px;
 	height: 27px;
 	text-transform: uppercase;
-}
-.grid-container-1 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 600px);
-		justify-content: center;
-}
-.grid-item{
-	justify-content: center;
-	margin-left: 10%;
+	text-align: left;
+	margin-left: 25%;
 }
 .description {
 	font-size: 18px;
@@ -37,30 +59,35 @@ h2 {
 	line-height: 27px;
 	width: 439px;
 	height: 87px;
-
+	text-align: left;
+	margin-left: 25%;
 }
+
 /* -------- MAIN BODY -------- */
-.grid-container-2 {
-	margin-top: 5%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 300px);
-	margin-left: 1%;
-	justify-content: center;
+.grid-item-2 {	
+	margin-top: 10%;
 }
-
-.grid-item-2 {
-	width: 100%;
-  height: 95%;
-	position: relative;
+.card-component-1 {
+	grid-area: card-component-1;
 }
-
 .card-component-2 {
-	margin-top: 40%;
+	grid-area: card-component-2;
+	margin-top: 30%;
+}
+.card-component-3 {
+	grid-area: card-component-3;
+}
+.card-component-4 {
+	grid-area: card-component-4;
+}
+.card-component-5 {
+	grid-area: card-component-5;
+	margin-top: 30%;
+}
+.card-component-6 {
+	grid-area: card-component-6;
 }
 
-.card-component-5 {
-	margin-top: 40%;
-}
 .headshot {
 	height: 350px;
 	width: 250px;
@@ -71,6 +98,8 @@ h2 {
 	font-style: normal;
 	font-weight: 600;
 	line-height: 27px;
+	text-align: left;
+	margin-left: 18%;
 }
 
 .role {
@@ -82,7 +111,7 @@ h2 {
 	text-align: left;
 	text-transform: uppercase;
 	transform-origin: 0 0;
-	transform: rotate(90deg) translate(-410px, -280px);  
+	transform: rotate(90deg) translate(-415px, -340px);  
 }
 /* -------- FOOTER -------- */
 
@@ -103,41 +132,109 @@ footer a {
 }
 
 /* --------- MEDIA QUERIES ----- */
+@media screen and (max-width: 1084px){
+	.grid-container {
+		display: grid;
+		/* height: 100vh; */
+		grid-template-columns: repeat(2, 50%);
+		grid-template-rows: 0.5fr .5fr 2fr 2fr 2fr;
+		grid-template-areas:
+		"grid-item-1-1 grid-item-1-1"
+		"grid-item-1-2 grid-item-1-2"
+		"card-component-1 card-component-2"
+		"card-component-3 card-component-4"
+		"card-component-5 card-component-6";
+
+		justify-content: center;
+		text-align: center;
+	}
+	.grid-item-1-1{
+		margin-left: 8%;
+	}
+	.grid-item-1-2{
+		margin-left: 8%;
+	}
+	h1 {
+		margin-left: 0;
+	}
+	h2 {
+		margin-left: 0;
+	}
+	.description {
+		margin-left: 0;
+	}
+	.card-component-4 {
+		margin-top: 40%;
+	}
+
+	.card-component-5 {
+		margin-top: 0%;
+	}
+	.card-component-6 {
+		margin-top: 40%;
+	}
+
+	.role {
+		font-size: 10px;
+		line-height: 13px;
+		transform: rotate(90deg) translate(-415px, -360px);
+	}
+}
+
 @media screen and (max-width: 376px){
 	body {
     font-family: 'Poppins', sans-serif;
-		margin: 2% 0%;
-}
-/* -------- HEADER -------- */
-h1 {
-	font-family: 'PT Serif', serif;
-	font-size: 36px;
-	font-weight: 700;
-	width: 278px;
-	height: 47px;
-	letter-spacing: -0.045em;
-}
-h2 {
-	font-size: 18px;
-	font-weight: 600;
-	line-height: 27px;
-	width: 117px;
-	height: 27px;
-	text-transform: uppercase;
-}
-.grid-container-1 {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, 350px);
-	justify-content: center;
-}
-	.grid-container-2 {
-		margin-top: 5%;
-		display: grid;
-		grid-template-columns: repeat(auto-fit, 140px);
-		grid-column-gap: 50px;
+		margin: 2% 0 0 10%;
 	}
+	/* -------- HEADER -------- */
+	.grid-container {
+		display: grid;
+		/* height: 100vh; */
+		grid-template-columns: repeat(2, 200px);
+		grid-template-rows: 0.5fr .5fr 300px 300px 300px;
+		grid-template-areas:
+			"grid-item-1-1 grid-item-1-1"
+			"grid-item-1-2 grid-item-1-2"
+			"card-component-1 card-component-2"
+			"card-component-3 card-component-4"
+			"card-component-5 card-component-6";
+		justify-content: center;
+		text-align: center;
+	}
+	.grid-item-1-1{
+		margin-left: 8%;
+	}
+	.grid-item-1-2{
+		margin-left: 8%;
+	}
+	h1 {
+		font-family: 'PT Serif', serif;
+		font-size: 36px;
+		font-weight: 700;
+		width: 278px;
+		height: 47px;
+		letter-spacing: -0.045em;
+		margin-left: 0;
+	}
+	h2 {
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 27px;
+		margin-left: 0;
+		width: 117px;
+		height: 27px;
+		text-transform: uppercase;
+	}
+	.description {
+		font-size: 14px;
+		margin-left: 0;
+		width: 333px;
+		height: 87px;
+		line-height: 21px;
+	}
+
 	.grid-item-2 {
-		margin-left: 15%;
+		margin-left: 0%;
 	}
 	.headshot {
 		height: 193px;
@@ -150,50 +247,19 @@ h2 {
 	.role {
 		font-size: 10px;
 		line-height: 13px;
-		transform: rotate(90deg) translate(-250px, -155px);
+		transform: rotate(90deg) translate(-245px, -185px);
 	}
 	.card-component-4 {
 		margin-top: 40%;
 	}
-	
+
 	.card-component-5 {
 		margin-top: 0%;
 	}
 	.card-component-6 {
 		margin-top: 40%;
 	}
-}
-
-@media screen and (max-width: 1084px){
-	.grid-container-2 {
-		margin-left: 0%;
-	}
-
-	.card-component-4 {
-		margin-top: 40%;
-	}
-	
-	.card-component-5 {
-		margin-top: 0%;
-	}
-	.card-component-6 {
-		margin-top: 40%;
-	}
-}
-
-@media screen and (min-width: 1441px){
-	.card-component-4 {
-		margin-top: 40%;
-	}
-
-	.card-component-4 {
-		margin-top: 40%;
-	}
-	
-	.card-component-5 {
-		margin-top: 0%;
-	}
-	.card-component-6 {
+	footer {
 		margin-top: 40%;
 	}
 }
